@@ -17,7 +17,6 @@ int main(){
     setlocale(LC_ALL, "Portuguese");
     int op;
     int i = 0;
-    int j;
     cliente cadastro[TAM];
     cadastro[0].cod = 0;
     
@@ -53,10 +52,10 @@ int main(){
         case 2 :
             if (cadastro[0].cod == 0 )
             {
-                printf("\n****AGENDA VAZIA****\n");
+                printf("\n****NÃO HÁ CLIENTES CADASTRADOS****\n");
 
             }else{
-                for (j = 0; j < TAM; j++){
+                for (int j = 0; j < TAM; j++){
                     if ((cadastro[j].cod > 0) && (cadastro[j].cod <= TAM))
                     {
                         printf("\n***Codigo do cliente: %d", cadastro[j].cod);
@@ -73,7 +72,7 @@ int main(){
         default: printf("\n****OPÇÃO INVALIDA!****\n") ;
             break;
         }
-        system("\npause");
+        system("pause");
         system("cls");   
     }while (op != 0);
     return(0);
